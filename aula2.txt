@@ -70,9 +70,10 @@ Ex revisão
 a) A Raiz e os nós
 
 Nó raiz = 0045
-b) Nós folhas
 
+b) Nós folhas
 0010, 0027, 0035, 0042, 0049, 0052, 0070, 0080
+
 c) O grau de cada nó
 0045 = 2
 0030 = 2
