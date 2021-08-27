@@ -61,11 +61,16 @@ public class ArvoreBinaria {
 	
 	
 		public void Nosfolhas(No raiz) {
-			if (raiz == null) return;
-			EmOrdem(raiz.esquerdo);
-			System.out.print(raiz.valor + "\t");
-			EmOrdem(raiz.direito);
-			
+			if (raiz == null) {
+				return;
+			}else {				
+				Nosfolhas(raiz.esquerdo);
+				Nosfolhas(raiz.direito);
+				if (raiz.direito == null && raiz.esquerdo == null) {
+					System.out.print(raiz.valor + "\t");					
+				}
+				
+			}
 		}
 	
 	
@@ -107,7 +112,7 @@ public class ArvoreBinaria {
 			
 			
 			public No buscar (No no, int valor) {
-				//System.out.println("focando no nó " + no.valor);
+				//System.out.println("focando no nó " + no.valor + "\t");
 				if (no.valor == valor) {
 					//System.out.println("O nó " + valor + " foi encontrado.");
 					return no;
@@ -123,7 +128,24 @@ public class ArvoreBinaria {
 			
 			
 			
-			
+			public void verificarAllgraus(No raiz) {
+				if (raiz == null) return;	
+							
+				No noEncontrado = buscar (raiz.valor);
+				
+				if (noEncontrado == null) {
+					System.out.println("O valor não existe na arvore.");
+				}else if (noEncontrado.direito == null && noEncontrado.esquerdo == null){
+					System.out.println("O grau do nó " + raiz.valor + " é zero.");
+				}else if (noEncontrado.direito != null && noEncontrado.esquerdo != null) {
+					System.out.println("O grau do nó " + raiz.valor + " é dois.");
+				}else {
+					System.out.println("O grau do nó " + raiz.valor + " é um.");
+				}
+				verificarAllgraus(raiz.esquerdo);
+				verificarAllgraus(raiz.direito);
+				
+				}
 			
 			public void verificarGrau (int valor) {
 				No noEncontrado = buscar (valor);
@@ -144,7 +166,15 @@ public class ArvoreBinaria {
 			
 			
 			
-			
+			public void verificarAllAltura(No raiz) {
+				if (raiz == null) return;	
+
+				No noEncontrado = buscar(raiz.valor);
+				System.out.println("A altura do nó " + raiz.valor + " é " + verificaAltura(noEncontrado));
+				verificarAllAltura(raiz.esquerdo);
+				verificarAllAltura(raiz.direito);
+				
+				}
 			
 			
 			
@@ -171,6 +201,17 @@ public class ArvoreBinaria {
 				
 			}
 			
+			public void verificarAllProfundidade(No raiz) {
+				if (raiz == null) return;			
+
+				No noEncontrado = buscar (raiz.valor);
+				System.out.println("A profundidade do nó " + raiz.valor + " é " + verificaProfundidade(noEncontrado));
+				verificarAllProfundidade(raiz.esquerdo);
+				verificarAllProfundidade(raiz.direito);
+				
+				}
+			
+			
 			
 			public void verificaProfundidade (int valor) {
 				No noEncontrado = buscar (valor);
@@ -188,6 +229,18 @@ public class ArvoreBinaria {
 			
 			
 			
+			
+			
+			public void verificarAllNivel(No raiz) {
+				if (raiz == null) return;							
+				
+				No noEncontrado = buscar (raiz.valor);
+				System.out.println("O nivel do nó " + raiz.valor + " é " + verificaNivel(noEncontrado));
+				
+				verificarAllNivel(raiz.esquerdo);
+				verificarAllNivel(raiz.direito);
+				
+				}
 			
 			
 			public void verificaNivel (int valor) {
