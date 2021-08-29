@@ -20,6 +20,8 @@ public class Main {
 	ab.adicionaNo(new No(18), ab.getArvoreBinaria());
 	ab.adicionaNo(new No(8), ab.getArvoreBinaria());
 	ab.adicionaNo(new No(7), ab.getArvoreBinaria());
+	
+
 		  
 		  
 			System.out.print("\n***********************************");

@@ -40,7 +40,80 @@ public class ArvoreBinaria {
 	}
 	
 	
+	public boolean remover(int valor) {
+	    if (raiz == null) return false; 
+
+	    No atual = raiz;
+	    No pai = raiz;
+	    boolean filho_esq = true;
+
+	   
+	    while (atual.valor != valor) { 
+	      pai = atual;
+	      if(valor < atual.valor ) { 
+	        atual = atual.esquerdo;
+	        filho_esq = true;
+	      }else {
+	        atual = atual.direito; 
+	        filho_esq = false;
+	      }if (atual == null) return false;
+	    }
+	    
+	    
+	    if (atual.esquerdo == null && atual.direito == null) {
+	      if (atual == raiz ) raiz = null;
+	      else if (filho_esq) pai.esquerdo = null;
+	           else pai.direito = null;
+	    }
+
+	   
+	    else if (atual.direito == null) {
+	       if (atual == raiz) raiz = atual.esquerdo;
+	       else if (filho_esq) pai.esquerdo = atual.esquerdo;
+	            else pai.direito = atual.esquerdo;
+	    }
+	    
+	    else if (atual.esquerdo == null) {
+	       if (atual == raiz) raiz = atual.direito;
+	       else if (filho_esq) pai.esquerdo = atual.direito;
+	            else pai.direito = atual.direito;
+	    }
+
+	    
+	    else {
+	      No sucessor = no_sucessor(atual);
+	     
+	      if (atual == raiz) raiz = sucessor;
+	      else if(filho_esq) pai.esquerdo = sucessor;
+	           else pai.direito = sucessor;
+	      sucessor.esquerdo = atual.esquerdo;
+	                              
+	    }
+
+	    return true;
+	  }
+		
 	
+	private No no_sucessor(No apaga) {
+		No paidosucessor = apaga;
+	     No sucessor = apaga;
+	     No atual = apaga.direito;
+
+	     while (atual != null) {
+	       paidosucessor = sucessor;
+	       sucessor = atual;
+	       atual = atual.esquerdo;
+	     } 
+	  
+	     if (sucessor != apaga.direito) {
+	       paidosucessor.esquerdo = sucessor.direito;
+
+	       sucessor.direito = apaga.direito; 
+	     }
+	     return sucessor;
+		
+	}
+
 	public void busca(int valor) {
 		busca(this.raiz, valor);
 	}
@@ -112,6 +185,8 @@ public class ArvoreBinaria {
 			
 			
 			public No buscar (No no, int valor) {
+				
+				// impressão do caminho que foi pecorrido
 				//System.out.println("focando no nó " + no.valor + "\t");
 				if (no.valor == valor) {
 					//System.out.println("O nó " + valor + " foi encontrado.");
