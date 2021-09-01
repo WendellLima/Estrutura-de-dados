@@ -9,17 +9,27 @@ public class Main {
 	Scanner entrada = new Scanner(System.in);
 	Scanner informeNo = new Scanner(System.in);
 	
-	ArvoreBinaria ab = new ArvoreBinaria(17);
+	ArvoreBinaria ab = new ArvoreBinaria(45);
 	
 	
-	ab.adicionaNo(new No(9), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(6), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(5), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(14), ab.getArvoreBinaria());
+	ab.adicionaNo(new No(30), ab.getArvoreBinaria());
+	ab.adicionaNo(new No(60), ab.getArvoreBinaria());
 	ab.adicionaNo(new No(20), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(18), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(8), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(7), ab.getArvoreBinaria());
+	ab.adicionaNo(new No(40), ab.getArvoreBinaria());
+	ab.adicionaNo(new No(10), ab.getArvoreBinaria());
+	ab.adicionaNo(new No(25), ab.getArvoreBinaria());
+	ab.adicionaNo(new No(27), ab.getArvoreBinaria());
+	ab.adicionaNo(new No(35), ab.getArvoreBinaria());
+	ab.adicionaNo(new No(42), ab.getArvoreBinaria());
+	
+	ab.adicionaNo(new No(50), ab.getArvoreBinaria());
+	ab.adicionaNo(new No(49), ab.getArvoreBinaria());
+	ab.adicionaNo(new No(52), ab.getArvoreBinaria());
+	
+	ab.adicionaNo(new No(75), ab.getArvoreBinaria());
+	ab.adicionaNo(new No(70), ab.getArvoreBinaria());
+	ab.adicionaNo(new No(80), ab.getArvoreBinaria());
+
 	
 
 		  
