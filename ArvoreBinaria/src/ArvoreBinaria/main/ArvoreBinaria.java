@@ -332,6 +332,26 @@ public class ArvoreBinaria {
 					
 			}
 			
+			public No min() {
+			    No atual = raiz;
+			    No anterior = null;
+			    while (atual != null) {
+			      anterior = atual;
+			      atual = atual.esquerdo;
+			    }
+			    return anterior;
+			  }
+
+			  public No max() {
+			    No atual = raiz;
+			    No anterior = null;
+			    while (atual != null) {
+			      anterior = atual;
+			      atual = atual.direito;
+			    }
+			    return anterior;
+			  }
+			
 	
 	
 }
