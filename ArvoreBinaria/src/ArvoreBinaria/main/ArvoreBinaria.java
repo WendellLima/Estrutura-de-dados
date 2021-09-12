@@ -1,5 +1,7 @@
 package ArvoreBinaria.main;
 
+import java.util.ArrayList;
+
 public class ArvoreBinaria {
 	
 	No raiz;
@@ -16,9 +18,9 @@ public class ArvoreBinaria {
 	public void getPai(int valor) {
 		No no = buscar(valor);
 		if(no.pai != null) {
-			System.out.println("O pai do nÛ" + valor + " È " + no.pai.valor);
+			System.out.println("O pai do n√≥" + valor + " √© " + no.pai.valor);
 		}else {
-			System.out.println("O nÛ " + valor + " È a raiz da ·rvore.");
+			System.out.println("O n√≥ " + valor + " √© a raiz da √°rvore.");
 		}
 			
 	}
@@ -120,15 +122,15 @@ public class ArvoreBinaria {
 	
 	
 	public void busca (No no, int valor) {
-		System.out.println("focando no nÛ " + no.valor);
+		System.out.println("focando no n√≥ " + no.valor);
 		if (no.valor == valor) {
-			System.out.println("O nÛ " + valor + " foi encontrado.");
+			System.out.println("O n√≥ " + valor + " foi encontrado.");
 		}else if ((valor < no.valor) && (no.esquerdo != null)){
 			busca (no.esquerdo, valor);
 		}else if ((valor > no.valor) && (no.direito != null)) {
 			busca (no.direito, valor);
 		}else {
-			System.out.println("O nÛ " + valor + " n„o foi incontrado.");
+			System.out.println("O n√≥ " + valor + " n√£o foi incontrado.");
 		}
 	}
 	
@@ -186,17 +188,17 @@ public class ArvoreBinaria {
 			
 			public No buscar (No no, int valor) {
 				
-				// impress„o do caminho que foi pecorrido
-				//System.out.println("focando no nÛ " + no.valor + "\t");
+				// impress√£o do caminho que foi pecorrido
+				//System.out.println("focando no n√≥ " + no.valor + "\t");
 				if (no.valor == valor) {
-					//System.out.println("O nÛ " + valor + " foi encontrado.");
+					//System.out.println("O n√≥ " + valor + " foi encontrado.");
 					return no;
 				}else if ((valor < no.valor) && (no.esquerdo != null)){
 					return buscar (no.esquerdo, valor);					
 				}else if ((valor > no.valor) && (no.direito != null)) {
 					return buscar (no.direito, valor);
 				}else {
-					System.out.println("O nÛ " + valor + " n„o foi incontrado.");
+					System.out.println("O n√≥ " + valor + " n√£o foi incontrado.");
 					return null;
 				}
 			}
@@ -209,13 +211,13 @@ public class ArvoreBinaria {
 				No noEncontrado = buscar (raiz.valor);
 				
 				if (noEncontrado == null) {
-					System.out.println("O valor n„o existe na arvore.");
+					System.out.println("O valor n√£o existe na arvore.");
 				}else if (noEncontrado.direito == null && noEncontrado.esquerdo == null){
-					System.out.println("O grau do nÛ " + raiz.valor + " È zero.");
+					System.out.println("O grau do n√≥ " + raiz.valor + " √© zero.");
 				}else if (noEncontrado.direito != null && noEncontrado.esquerdo != null) {
-					System.out.println("O grau do nÛ " + raiz.valor + " È dois.");
+					System.out.println("O grau do n√≥ " + raiz.valor + " √© dois.");
 				}else {
-					System.out.println("O grau do nÛ " + raiz.valor + " È um.");
+					System.out.println("O grau do n√≥ " + raiz.valor + " √© um.");
 				}
 				verificarAllgraus(raiz.esquerdo);
 				verificarAllgraus(raiz.direito);
@@ -226,13 +228,13 @@ public class ArvoreBinaria {
 				No noEncontrado = buscar (valor);
 				
 				if (noEncontrado == null) {
-					System.out.println("O valor n„o existe na arvore.");
+					System.out.println("O valor n√£o existe na arvore.");
 				}else if (noEncontrado.direito == null && noEncontrado.esquerdo == null){
-					System.out.println("O grau do nÛ " + valor + " È zero.");
+					System.out.println("O grau do n√≥ " + valor + " √© zero.");
 				}else if (noEncontrado.direito != null && noEncontrado.esquerdo != null) {
-					System.out.println("O grau do nÛ " + valor + " È dois.");
+					System.out.println("O grau do n√≥ " + valor + " √© dois.");
 				}else {
-					System.out.println("O grau do nÛ " + valor + " È um.");
+					System.out.println("O grau do n√≥ " + valor + " √© um.");
 				}
 			}
 			
@@ -245,7 +247,7 @@ public class ArvoreBinaria {
 				if (raiz == null) return;	
 
 				No noEncontrado = buscar(raiz.valor);
-				System.out.println("A altura do nÛ " + raiz.valor + " È " + verificaAltura(noEncontrado));
+				System.out.println("A altura do n√≥ " + raiz.valor + " √© " + verificaAltura(noEncontrado));
 				verificarAllAltura(raiz.esquerdo);
 				verificarAllAltura(raiz.direito);
 				
@@ -255,7 +257,7 @@ public class ArvoreBinaria {
 			
 			public void verificaAltura (int valor) {
 				No noEncontrado = buscar(valor);
-				System.out.println("A altura do nÛ " + valor + " È " + verificaAltura(noEncontrado));
+				System.out.println("A altura do n√≥ " + valor + " √© " + verificaAltura(noEncontrado));
 			}
 	
 			
@@ -280,7 +282,7 @@ public class ArvoreBinaria {
 				if (raiz == null) return;			
 
 				No noEncontrado = buscar (raiz.valor);
-				System.out.println("A profundidade do nÛ " + raiz.valor + " È " + verificaProfundidade(noEncontrado));
+				System.out.println("A profundidade do n√≥ " + raiz.valor + " √© " + verificaProfundidade(noEncontrado));
 				verificarAllProfundidade(raiz.esquerdo);
 				verificarAllProfundidade(raiz.direito);
 				
@@ -290,7 +292,7 @@ public class ArvoreBinaria {
 			
 			public void verificaProfundidade (int valor) {
 				No noEncontrado = buscar (valor);
-				System.out.println("A profundidade do nÛ " + valor + " È " + verificaProfundidade(noEncontrado));
+				System.out.println("A profundidade do n√≥ " + valor + " √© " + verificaProfundidade(noEncontrado));
 			}
 			
 			public int verificaProfundidade (No no) {
@@ -310,7 +312,7 @@ public class ArvoreBinaria {
 				if (raiz == null) return;							
 				
 				No noEncontrado = buscar (raiz.valor);
-				System.out.println("O nivel do nÛ " + raiz.valor + " È " + verificaNivel(noEncontrado));
+				System.out.println("O nivel do n√≥ " + raiz.valor + " √© " + verificaNivel(noEncontrado));
 				
 				verificarAllNivel(raiz.esquerdo);
 				verificarAllNivel(raiz.direito);
@@ -320,7 +322,7 @@ public class ArvoreBinaria {
 			
 			public void verificaNivel (int valor) {
 				No noEncontrado = buscar (valor);
-				System.out.println("O nivel do nÛ " + valor + " È " + verificaNivel(noEncontrado));
+				System.out.println("O nivel do n√≥ " + valor + " √© " + verificaNivel(noEncontrado));
 			}
 			
 			public int verificaNivel (No no) {
@@ -351,7 +353,31 @@ public class ArvoreBinaria {
 			    }
 			    return anterior;
 			  }
-			
-	
+			  
+			  
+			  
+			  /* public void printar (String s, Boolean ultimo) {
+				  System.out.println(s);
+				  if (ultimo) {
+					  System.out.println("‚îî‚îÄ");
+					  s += " ";
+					  
+				  }else {
+					  System.out.println("‚îú‚îÄ");
+					  s += "| ";
+				  }
+				System.out.println(valor);
+				
+				ArrayList <Nodo> filho = new ArrayList <Nodo> ();
+				if (this.e != null) filho.add(this.e);
+				if (this.d != null) filho.add(this.d);
+				
+				
+				for (int i = 0; i < filho.size(); i++) {
+					filho.get (i).printar (s, i == filho.size() -1);
+				}
+			  }
+			 */
+				
 	
 }
