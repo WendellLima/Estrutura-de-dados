@@ -147,6 +147,22 @@ public class ArvoreBinaria {
 				
 			}
 		}
+		
+		public void mostrar() {
+			mostrarArvore(raiz, "   ");
+		}
+		
+		private void mostrarArvore(No raiz, String espaco) {
+			if (raiz == null) return;
+			mostrarArvore(raiz.esquerdo, espaco + "   ");
+			System.out.print("\n");
+			System.out.print(espaco + raiz.valor);
+			mostrarArvore(raiz.direito, espaco + "   ");
+			
+			
+		}
+
+
 	
 	
 	//Em ordem ou ERD
@@ -356,7 +372,7 @@ public class ArvoreBinaria {
 			  
 			  
 			  
-			  /* public void printar (String s, Boolean ultimo) {
+			   /*public void printar (String s, Boolean ultimo) {
 				  System.out.println(s);
 				  if (ultimo) {
 					  System.out.println("└─");
@@ -368,16 +384,16 @@ public class ArvoreBinaria {
 				  }
 				System.out.println(valor);
 				
-				ArrayList <Nodo> filho = new ArrayList <Nodo> ();
+				ArrayList <No> filho = new ArrayList <No> ();
 				if (this.e != null) filho.add(this.e);
 				if (this.d != null) filho.add(this.d);
 				
 				
 				for (int i = 0; i < filho.size(); i++) {
-					filho.get (i).printar (s, i == filho.size() -1);
+					filho.get(i).printar (s, i == filho.size() -1);
 				}
 			  }
-			 */
-				
+			 
+				*/
 	
 }

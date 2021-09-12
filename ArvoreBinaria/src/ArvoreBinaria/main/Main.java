@@ -120,6 +120,7 @@ public class Main {
 		     case 8:
 		    	 
 			       System.out.println("Segue subárvores");
+			       ab.mostrar();
 			       
 			       break;
 
