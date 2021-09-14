@@ -241,6 +241,6 @@ ex 4
 
 NIVEL1						A
 NIVEL2			C							B
-NIVEL3		E								D
-NIVEL4	F								H		G
+NIVEL3		F		E						D
+NIVEL4									H		G
 

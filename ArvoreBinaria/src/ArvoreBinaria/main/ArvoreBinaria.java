@@ -154,13 +154,15 @@ public class ArvoreBinaria {
 		
 		private void mostrarArvore(No raiz, String espaco) {
 			if (raiz == null) return;
-			mostrarArvore(raiz.esquerdo, espaco + "   ");
+			mostrarArvore(raiz.direito, espaco + "   ");
 			System.out.print("\n");
 			System.out.print(espaco + raiz.valor);
-			mostrarArvore(raiz.direito, espaco + "   ");
+			mostrarArvore(raiz.esquerdo, espaco + "   ");
 			
 			
 		}
+		
+
 
 
 	
@@ -179,16 +181,16 @@ public class ArvoreBinaria {
 		public void PreOrdem(No raiz) {
 			if (raiz == null) return;
 			System.out.print(raiz.valor + "\t");
-			EmOrdem(raiz.esquerdo);			
-			EmOrdem(raiz.direito);
+			PreOrdem(raiz.esquerdo);			
+			PreOrdem(raiz.direito);
 		}
 		
 		
 	//Pos ordem ou EDR
 			public void PosOrdem(No raiz) {
 				if (raiz == null) return;				
-				EmOrdem(raiz.esquerdo);			
-				EmOrdem(raiz.direito);
+				PosOrdem(raiz.esquerdo);			
+				PosOrdem(raiz.direito);
 				System.out.print(raiz.valor + "\t");
 				}
 	
