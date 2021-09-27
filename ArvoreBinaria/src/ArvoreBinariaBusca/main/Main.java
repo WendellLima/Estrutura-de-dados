@@ -30,7 +30,6 @@ public class Main {
 	ab.adicionaNo(new No(70), ab.getArvoreBinaria());
 	ab.adicionaNo(new No(80), ab.getArvoreBinaria());
 
-	
 
 		  
 		  
@@ -46,12 +45,13 @@ public class Main {
 			System.out.print("\n ----8: Imprimir subárvores");
 			System.out.print("\n ----9: Quantidade de nós");
 			System.out.print("\n ----10: Inserir um nó");
-			System.out.print("\n ----11: Sair do programa");
+			System.out.print("\n ----11: Remover um nó");
+			System.out.print("\n ----12: Sair do programa");
 			System.out.print("\n***********************************");
-			System.out.print("\n-> ");
-	
-	
-		  System.out.println("Informe sua opção de escolha:");
+			System.out.print("\n-> ");	
+			System.out.print("Informe sua opção de escolha:");
+			
+			
 		  int opcao = entrada.nextInt();
 		  switch (opcao) {
 		  
@@ -150,7 +150,26 @@ public class Main {
 		    	 System.out.print("\n A árvore depois de inserir é assim: ");		    	 
 		    	 ab.mostrar();
 			       
-			       break;        
+			       break;     
+			       
+			       
+		     case 11:
+		    	 
+
+		    	 System.out.print("\n Informe o nó para remover -> ");
+		    	 System.out.print("\n");
+		    	 int r = informeNo.nextInt();
+		    	 
+		    	 
+		    	 System.out.print("\n A árvore antes de remover é assim: ");  
+		    	 ab.mostrar();
+		    	 
+		    	 ab.remover(r);
+		    	 
+		    	 System.out.print("\n A árvore depois de remover é assim: ");		    	 
+		    	 ab.mostrar();
+			       
+			       break;      
 			       
 			       
 		     default:
@@ -168,6 +187,8 @@ public class Main {
 
 
 
+		  
+		  
 	}
 
 

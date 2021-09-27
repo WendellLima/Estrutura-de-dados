@@ -227,13 +227,13 @@ public class ArvoreBinariaBusca {
 				No noEncontrado = buscar (raiz.valor);
 				
 				if (noEncontrado == null) {
-					System.out.println("O valor n√£o existe na arvore.");
+					System.out.println("O valor n„o existe na arvore.");
 				}else if (noEncontrado.direito == null && noEncontrado.esquerdo == null){
-					System.out.println("O grau do n√≥ " + raiz.valor + " √© zero.");
+					System.out.println("O grau do nÛ " + raiz.valor + " È zero.");
 				}else if (noEncontrado.direito != null && noEncontrado.esquerdo != null) {
-					System.out.println("O grau do n√≥ " + raiz.valor + " √© dois.");
+					System.out.println("O grau do nÛ " + raiz.valor + " È dois.");
 				}else {
-					System.out.println("O grau do n√≥ " + raiz.valor + " √© um.");
+					System.out.println("O grau do nÛ " + raiz.valor + " È um.");
 				}
 				verificarAllgraus(raiz.esquerdo);
 				verificarAllgraus(raiz.direito);
@@ -244,13 +244,13 @@ public class ArvoreBinariaBusca {
 				No noEncontrado = buscar (valor);
 				
 				if (noEncontrado == null) {
-					System.out.println("O valor n√£o existe na arvore.");
+					System.out.println("O valor n„o existe na arvore.");
 				}else if (noEncontrado.direito == null && noEncontrado.esquerdo == null){
-					System.out.println("O grau do n√≥ " + valor + " √© zero.");
+					System.out.println("O grau do nÛ " + valor + " È zero.");
 				}else if (noEncontrado.direito != null && noEncontrado.esquerdo != null) {
-					System.out.println("O grau do n√≥ " + valor + " √© dois.");
+					System.out.println("O grau do nÛ " + valor + " È dois.");
 				}else {
-					System.out.println("O grau do n√≥ " + valor + " √© um.");
+					System.out.println("O grau do nÛ " + valor + " È um.");
 				}
 			}
 			
@@ -263,7 +263,7 @@ public class ArvoreBinariaBusca {
 				if (raiz == null) return;	
 
 				No noEncontrado = buscar(raiz.valor);
-				System.out.println("A altura do n√≥ " + raiz.valor + " √© " + verificaAltura(noEncontrado));
+				System.out.println("A altura do nÛ " + raiz.valor + " È " + verificaAltura(noEncontrado));
 				verificarAllAltura(raiz.esquerdo);
 				verificarAllAltura(raiz.direito);
 				
@@ -273,7 +273,7 @@ public class ArvoreBinariaBusca {
 			
 			public void verificaAltura (int valor) {
 				No noEncontrado = buscar(valor);
-				System.out.println("A altura do n√≥ " + valor + " √© " + verificaAltura(noEncontrado));
+				System.out.println("A altura do nÛ " + valor + " È " + verificaAltura(noEncontrado));
 			}
 	
 			
@@ -298,7 +298,7 @@ public class ArvoreBinariaBusca {
 				if (raiz == null) return;			
 
 				No noEncontrado = buscar (raiz.valor);
-				System.out.println("A profundidade do n√≥ " + raiz.valor + " √© " + verificaProfundidade(noEncontrado));
+				System.out.println("A profundidade do nÛ " + raiz.valor + " È " + verificaProfundidade(noEncontrado));
 				verificarAllProfundidade(raiz.esquerdo);
 				verificarAllProfundidade(raiz.direito);
 				
@@ -308,7 +308,7 @@ public class ArvoreBinariaBusca {
 			
 			public void verificaProfundidade (int valor) {
 				No noEncontrado = buscar (valor);
-				System.out.println("A profundidade do n√≥ " + valor + " √© " + verificaProfundidade(noEncontrado));
+				System.out.println("A profundidade do nÛ " + valor + " È " + verificaProfundidade(noEncontrado));
 			}
 			
 			public int verificaProfundidade (No no) {
@@ -328,7 +328,7 @@ public class ArvoreBinariaBusca {
 				if (raiz == null) return;							
 				
 				No noEncontrado = buscar (raiz.valor);
-				System.out.println("O nivel do n√≥ " + raiz.valor + " √© " + verificaNivel(noEncontrado));
+				System.out.println("O nivel do nÛ " + raiz.valor + " È " + verificaNivel(noEncontrado));
 				
 				verificarAllNivel(raiz.esquerdo);
 				verificarAllNivel(raiz.direito);
@@ -338,7 +338,7 @@ public class ArvoreBinariaBusca {
 			
 			public void verificaNivel (int valor) {
 				No noEncontrado = buscar (valor);
-				System.out.println("O nivel do n√≥ " + valor + " √© " + verificaNivel(noEncontrado));
+				System.out.println("O nivel do nÛ " + valor + " È " + verificaNivel(noEncontrado));
 			}
 			
 			public int verificaNivel (No no) {
