@@ -23,6 +23,7 @@ public class Main {
 		System.out.print("\n ----9: Quantidade de nós");
 		System.out.print("\n ----10: Inserir um nó");
 		System.out.print("\n ----11: Remover um nó");
+		System.out.print("\n ----12: Inverter árvore");
 		System.out.print("\n ----0: Sair do programa");
 		System.out.print("\n***********************************");
 		System.out.print("\n-> ");	
@@ -173,6 +174,15 @@ public class Main {
 	    	 
 	    	 System.out.print("\n A árvore depois de remover é assim: ");		    	 
 	    	 ab.mostrar();
+          	  
+          	  break;
+          	  
+          	  
+         case 12:
+        	 System.out.print("\n A árvore normal é assim: ");
+        	 ab.mostrar();
+        	 System.out.print("\n A árvore invertida é assim: ");
+	    	 ab.mostrarInvertida();
           	  
           	  break;
           	  

@@ -160,6 +160,24 @@ public class ArvoreBinariaBusca {
 			
 		}
 		
+		
+		
+		
+		public void mostrarInvertida() {
+			mostrarArvoreInvertida(raiz, "   ");
+		}
+		
+		private void mostrarArvoreInvertida(No raiz, String espaco) {
+			if (raiz == null) return;
+			mostrarArvoreInvertida(raiz.esquerdo, espaco + "   ");
+			
+			System.out.print("\n");
+			System.out.print(espaco + raiz.valor);
+			mostrarArvoreInvertida(raiz.direito, espaco + "   ");
+			
+			
+		}
+		
 
 
 
