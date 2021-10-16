@@ -394,6 +394,43 @@ public class ArvoreBinariaBusca {
 				   if(atual == null)  return 0;
 				   else return ( 1 + contarNos(atual.esquerdo) + contarNos(atual.direito));
 				  }
+
+
+
+			public void insertList(ArvoreBinariaBusca ab, int[] list) {
+					for (int i = 0; i < list.length; i++){
+						
+
+			          ab.adicionaNo(new No(list[i]), ab.getArvoreBinaria());
+			          
+			      }
+					
+					ab.remover(ab.getArvoreBinaria().valor);
+					System.out.println("POS ORDEM");
+					ab.PosOrdem(raiz);
+					System.out.print("\n");
+					System.out.println("EM ORDEM");					
+					ab.EmOrdem(raiz);
+					System.out.print("\n");
+					System.out.println("PRE ORDEM");					
+					ab.PreOrdem(raiz);
+					
+					
+					
+					System.out.print("\n");
+					System.out.print("\n");
+					System.out.println("ÁRVORE");
+					ab.mostrar();
+					
+					
+					
+			}
+
+
+
+
+
+
 			  
 			  
 			  

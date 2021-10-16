@@ -1,5 +1,7 @@
 package ArvoreBinariaBusca.main;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -31,6 +33,8 @@ public class Main {
 		System.out.print("\n-> ");
 
     }
+    
+
 	
 	
 
@@ -41,27 +45,14 @@ public class Main {
 	Scanner entrada = new Scanner(System.in);
 	Scanner informeNo = new Scanner(System.in);
 	
-	ArvoreBinariaBusca ab = new ArvoreBinariaBusca(45);
+	ArvoreBinariaBusca ab = new ArvoreBinariaBusca(0);
 	
+	int[] list = {45, 30, 60, 20, 40, 10, 25, 27, 35, 42, 50, 49, 52, 75, 70, 80};
 	
-	ab.adicionaNo(new No(30), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(60), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(20), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(40), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(10), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(25), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(27), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(35), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(42), ab.getArvoreBinaria());
+	//1, 5, 9, 8
+	//45, 30, 60, 20, 40, 10, 25, 27, 35, 42, 50, 49, 52, 75, 70, 80
 	
-	ab.adicionaNo(new No(50), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(49), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(52), ab.getArvoreBinaria());
-	
-	ab.adicionaNo(new No(75), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(70), ab.getArvoreBinaria());
-	ab.adicionaNo(new No(80), ab.getArvoreBinaria());
-
+	ab.insertList(ab,list);
 
 		  
 	 int opcao;
